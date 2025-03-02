@@ -1,10 +1,11 @@
 const menuItems = [
-    { name: "Cheese Pizza", price: 8.99, image: "images/cheese_pizza.png" },
-    { name: "Pepperoni Pizza", price: 9.99, image: "images/pepperoni_pizza.png" },
-    { name: "Veggie Pizza", price: 10.99, image: "images/veggie_pizza.png" },
-    { name: "Meat Lovers Pizza", price: 12.99, image: "images/meat_lovers_pizza.png" },
-    { name: "BBQ Chicken Pizza", price: 11.99, image: "images/bbq_chicken_pizza.png" }
+    { name: "Cheese Pizza", price: 8.99, image: "images/cheese_pizza.png.webp", description: "Classic cheese pizza with rich tomato sauce and melted mozzarella." },
+    { name: "Pepperoni Pizza", price: 9.99, image: "images/pepperoni_pizza.png.webp", description: "A delicious pizza topped with crispy pepperoni and gooey cheese." },
+    { name: "Veggie Pizza", price: 10.99, image: "images/veggie_pizza.png.webp", description: "Fresh vegetables including bell peppers, onions, olives, and mushrooms." },
+    { name: "Meat Lovers Pizza", price: 12.99, image: "images/meat_lovers_pizza.png.webp", description: "Loaded with pepperoni, sausage, bacon, ham, and ground beef." },
+    { name: "BBQ Chicken Pizza", price: 11.99, image: "images/bbq_chicken_pizza.png.webp", description: "Smoky BBQ sauce, grilled chicken, red onions, and melted cheese." }
 ];
+
 
 function displayMenu() {
     let menuSection = document.getElementById("pizza-list");

@@ -15,7 +15,14 @@
         <h2>Menu</h2>
         <div id="pizza-list"></div>
     </section>
-    
+    <div class="auth">
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+    <p id="auth-message"></p>
+</div>
+
     <section class="cart">
         <h2>Your Cart</h2>
         <div id="cart-items"></div>
@@ -34,12 +41,19 @@
         <h3>Extra Toppings</h3>
         <label><input type="checkbox" name="topping" value="cheese"> Extra Cheese</label>
         <label><input type="checkbox" name="topping" value="pepperoni"> Extra Pepperoni</label>
+        <label><input type="checkbox" name="topping" value="mushrooms"> Pepperoni</label>
+        <label><input type="checkbox" name="topping" value="mushrooms"> Peppers</label>
+        <label><input type="checkbox" name="topping" value="mushrooms"> Sausage</label>
+        <label><input type="checkbox" name="topping" value="mushrooms"> Onions</label>
         <label><input type="checkbox" name="topping" value="mushrooms"> Mushrooms</label>
         <button onclick="placeOrder()">Place Order</button>
     </section>
-    <script src="menu.js"></script>
-    <script src="script.js"></script>
+    <input type="text" id="coupon-code" placeholder="Enter Coupon Code">
+    <button onclick="applyCoupon()">Apply</button>
+<p id="discount-message"></p>
+<p id="order-confirmation"></p>
 
-
+<script src="menu.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
