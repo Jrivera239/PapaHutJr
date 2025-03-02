@@ -3,40 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papa Hut Jr. - Home</title>
+    <title>Papa Hut Jr. - Order Pizza</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Welcome to Papa Hut Jr.</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
-            
-            </ul>
-        </nav>
     </header>
     
-    <section class="hero">
-        <h2>Delicious Pizzas Delivered Fast!</h2>
-        <p>Order your favorite pizza with just a few clicks.</p>
-        <a href="menu.html" class="btn1">Order Now</a>
-    
-    
-    <section class="promotions">
-        <h2>Special for limited time</h2>
-        <div class="promo-list">
-                <h3>FREE DELIVERY!!!</h3>
-                <p><b>On orders over $30."</p></b>
-            </div>
-        </div>
+    <section class="menu">
+        <h2>Menu</h2>
+        <div id="pizza-list"></div>
     </section>
-</section>
-    <footer>
-        <p>&copy; 2025 Papa Hut Jr. - All Rights Reserved.</p>
-    </footer>
+    
+    <section class="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button onclick="toggleCheckout()">Proceed to Checkout</button>
+    </section>
+    
+    <section class="checkout" id="checkout-section" style="display:none;">
+        <h2>Checkout</h2>
+        <label>
+            <input type="radio" name="deliveryOption" value="pickup" checked> Pickup
+        </label>
+        <label>
+            <input type="radio" name="deliveryOption" value="delivery"> Delivery
+        </label>
+        <div id="order-summary"></div>
+        <h3>Extra Toppings</h3>
+        <label><input type="checkbox" name="topping" value="cheese"> Extra Cheese</label>
+        <label><input type="checkbox" name="topping" value="pepperoni"> Extra Pepperoni</label>
+        <label><input type="checkbox" name="topping" value="mushrooms"> Mushrooms</label>
+        <button onclick="placeOrder()">Place Order</button>
+    </section>
+    <script src="menu.js"></script>
+    <script src="script.js"></script>
+
+
 </body>
 </html>

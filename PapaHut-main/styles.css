@@ -41,6 +41,22 @@ header {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
+.menu-item {
+    display: inline-block;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 220px;
+}
+
+.menu-image {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
 
 
 /* Adjustments for smaller screens */
@@ -238,23 +254,36 @@ footer {
         font-size: 0.8em;
     }
 }
-.pizza-item {
-    /* Add your styles here */
-  }
-  
-  .pizza-item img {
-   
-  }
-  
-  .pizza-item h3 {
-  
-  }
-  
-  .pizza-item p {
-  
-  }
-  
-  .add-to-cart {
-    
-  }
-  
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 60%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
