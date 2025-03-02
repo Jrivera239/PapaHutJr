@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Papa Hut Jr. - Pizza Customization</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>Your Cart</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="cart.html">Cart</a></li>
+				<li><a href="checkout.html">Checkout</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="cart">
+		<h2>Customize Your <span id="pizza-name"></span> Pizza.</h2>
+        <div class="pizza-custom">
+            <p>Base Price: $<span id="base-price"></span></p>
+            <h2>Choose Toppings</h2>
+            <form id="toppings-form" class="topping-selector" data-base-price="8.99">
+                <input type="checkbox" class="topping" value="1.50"> Extra Cheese (+$1.50)<br>
+                <input type="checkbox" class="topping" value="1.50"> Bacon (+$1.50)<br>
+                <input type="checkbox" class="topping" value="1.50"> Pepperoni (+$1.50)<br>
+                <input type="checkbox" class="topping" value="1.50"> Salami (+$1.50)<br>
+                <input type="checkbox" class="topping" value="1.50"> Sausage (+$1.50)<br>
+                <input type="checkbox" class="topping" value="1.25"> Mushrooms (+$1.25)<br>
+                <input type="checkbox" class="topping" value="1.25"> Bell Pepper (+$1.25)<br>
+                <input type="checkbox" class="topping" value="1.25"> Onions (+$1.25)<br>
+                <input type="checkbox" class="topping" value="1.25"> Jalapenos (+$1.25)<br>
+            </form>
+            <p>Total Price: $<span id="total-price"></span></p>
+            <button id="add-to-cart">Add to Cart</button> <!--Trying to add a listener to update cart -->
+            <button onclick="window.location.href='menu.html'">Choose Another Pizza</button>
+            <button onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+        </div>
+	</section>
+</body>
+</html>
+<script src="customize.js"></script>
