@@ -154,13 +154,11 @@ button:hover, .add-to-cart:hover, .checkout-btn:hover {
     object-fit: cover; /* Crops and scales images properly */
     border-radius: 8px;
 }
-.pizza-item img {
-    max-width: 100%; /* Ensures image does not exceed container width */
-    height: 200px; /* Uniform height */
-    object-fit: cover; /* Prevents stretching, maintains aspect ratio */
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto; /* Centers the image */
+
+
+.menu-item:hover {
+    margin: 0 auto; /* Centers the image */  transform: scale(1.05);
+    background-color: #f0f0f0;
 }
 
 .cart {
@@ -287,3 +285,4 @@ footer {
     font-size: 30px;
     cursor: pointer;
 }
+

@@ -70,3 +70,18 @@ function openModal(name, image, description) {
 function closeModal() {
     document.getElementById("pizza-modal").style.display = "none";
 }
+
+function displayMenu() {
+    let menuSection = document.getElementById("pizza-list");
+    menuSection.innerHTML = "";
+    menuItems.forEach((item, index) => {
+        menuSection.innerHTML += `<div class='menu-item' onclick="openModal('${item.name}', '${item.image}', '${item.description}')">
+            <img src="${item.image}" alt="${item.name}" class='menu-image'>
+            <h3>${item.name}</h3>
+            <p>Price: $${item.price.toFixed(2)}</p>
+            <button onclick="addPizza('${item.name}', ${item.price}); event.stopPropagation();">Add to Cart</button>
+        </div>`;
+    });
+}
+
+document.addEventListener("DOMContentLoaded", displayMenu);
