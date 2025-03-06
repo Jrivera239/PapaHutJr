@@ -11,7 +11,23 @@ document.addEventListener("DOMContentLoaded", function () {
         div.textContent = input;
         return div.innerHTML;
     }
-
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartContainer = document.getElementById("checkoutCart");
+    
+        if (cart.length === 0) {
+            cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+        } else {
+            cartContainer.innerHTML = "";
+            cart.forEach(item => {
+                let itemElement = document.createElement("p");
+                itemElement.textContent = item.name + " - $" + item.price.toFixed(2);
+                cartContainer.appendChild(itemElement);
+            });
+        }
+    });
+    
     // Retrieve and display total price from local storage
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     let total = cart.reduce((sum, item) => sum + item.price, 0);
@@ -81,3 +97,39 @@ document.getElementById("payment-form").addEventListener("submit", async functio
         alert("Payment failed. Please try again.");
     }
 });
+
+function generateOrderNumber() {
+    return Math.floor(100000 + Math.random() * 900000); // Generate 6-digit order number
+}
+
+function showOrderConfirmation() {
+    let orderNumber = generateOrderNumber();
+    alert("Thank you for your order! Your order number is: " + orderNumber);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cartContainer = document.getElementById("checkoutCart");
+
+    if (cart.length === 0) {
+        cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+    } else {
+        cartContainer.innerHTML = "";
+        cart.forEach(item => {
+            let itemElement = document.createElement("p");
+            itemElement.textContent = item.name + " - $" + item.price.toFixed(2);
+            cartContainer.appendChild(itemElement);
+        });
+    }
+});
+
+function payNow() {
+    let orderNumber = Math.floor(100000 + Math.random() * 900000); // Random 6-digit order number
+    alert("Thank you for your order! Your order number is: " + orderNumber);
+
+    // Clear the cart after order is placed
+    localStorage.removeItem("cart");
+
+    // Redirect or reload page
+    window.location.href = "index.html"; // Or any confirmation page
+}

@@ -1,3 +1,12 @@
+﻿
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+</nav>
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +40,10 @@
     
     <section class="checkout" id="checkout-section" style="display:none;">
         <h2>Checkout</h2>
+        
+        
+</button>
+
         <label>
             <input type="radio" name="deliveryOption" value="pickup" checked> Pickup
         </label>
@@ -46,7 +59,10 @@
         <label><input type="checkbox" name="topping" value="mushrooms"> Sausage</label>
         <label><input type="checkbox" name="topping" value="mushrooms"> Onions</label>
         <label><input type="checkbox" name="topping" value="mushrooms"> Mushrooms</label>
-        <button onclick="placeOrder()">Place Order</button>
+        <button id="proceedToCheckout" onclick="window.location.href='checkout.html'">
+            Proceed to Checkout
+        </button>
+        
     </section>
     <input type="text" id="coupon-code" placeholder="Enter Coupon Code">
     <button onclick="applyCoupon()">Apply</button>
@@ -57,3 +73,17 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+<div id="cartPopup" class="popup" style="display:none;">
+    <p>Item added to cart!</p>
+    <button onclick="closeCartPopup()">OK</button>
+</div>
+
+<script>
+function showCartPopup() {
+    document.getElementById("cartPopup").style.display = "block";
+}
+function closeCartPopup() {
+    document.getElementById("cartPopup").style.display = "none";
+}
+</script>
